@@ -7,12 +7,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.kermeson.sgvbr.SampleController">
    <children>
       <ToolBar prefHeight="127.0" prefWidth="600.0">
         <items>
-          <Button id="menu_produtos" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" prefHeight="105.0" prefWidth="87.0" text="Produtos">
+          <Button id="menu_produtos" fx:id="btnProdutos" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#visualizarProdutosAction" prefHeight="105.0" prefWidth="87.0" text="Produtos">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button id="menu_produtos" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" prefHeight="105.0" prefWidth="87.0" text="Clientes">
                <font>
                   <Font size="10.0" />
                </font>
