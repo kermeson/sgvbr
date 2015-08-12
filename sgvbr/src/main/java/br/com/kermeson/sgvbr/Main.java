@@ -1,18 +1,19 @@
 package br.com.kermeson.sgvbr;
 
+import br.com.kermeson.sgvbr.ui.controller.SampleController;
+import br.com.kermeson.sgvbr.util.SpringFXMLLoader;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			VBox root = (VBox) FXMLLoader
-					.load(Thread.currentThread().getContextClassLoader().getResource("fxml/Sample.fxml"));
-			Scene scene = new Scene(root, 400, 400);
+
+			SampleController produtosController = (SampleController) SpringFXMLLoader.load("fxml/Sample.fxml");
+			Scene scene = new Scene((Parent) produtosController.getView(), 400, 400);
 			scene.getStylesheets().add(
 					Thread.currentThread().getContextClassLoader().getResource("css/application.css").toExternalForm());
 			primaryStage.setScene(scene);

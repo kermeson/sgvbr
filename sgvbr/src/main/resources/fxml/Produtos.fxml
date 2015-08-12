@@ -5,21 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="426.0" prefWidth="327.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane prefHeight="426.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.kermeson.sgvbr.ui.controller.ProdutosController">
    <children>
       <VBox layoutX="95.0" layoutY="6.0" prefHeight="426.0" prefWidth="327.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Pane prefHeight="50.0" prefWidth="327.0">
                <children>
-                  <Button layoutX="233.0" layoutY="13.0" mnemonicParsing="false" text="Adicionar" />
+                  <Button fx:id="btnAdicionar" layoutX="233.0" layoutY="13.0" mnemonicParsing="false" onAction="#adicionarProdutoAction" text="Adicionar" />
                   <TextField layoutX="14.0" layoutY="13.0" />
                </children>
             </Pane>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="tbProdutos" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="Código" />
-                <TableColumn prefWidth="132.0" text="Descrição" />
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Código" />
+                <TableColumn fx:id="colNome" prefWidth="132.0" text="Descrição" />
               </columns>
             </TableView>
          </children>
